@@ -1,0 +1,67 @@
+# Ignorer les dossiers de compilation Java
+/out/
+target/
+*.class
+
+# Ignorer les bibliothèques et dépendances locales
+*.jar
+*.war
+*.ear
+lib/
+
+# Ignorer les fichiers de configuration de VSCode
+.vscode/
+
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les logs et les fichiers temporaires
+logs/
+*.log
+*.tmp
+
+# Ignorer les fichiers de configuration spécifiques au serveur Spigot
+spigot.yml
+bukkit.yml
+server.properties
+usercache.json
+whitelist.json
+ops.json
+eula.txt
+
+# Ignorer les fichiers et dossiers de plugins avec des données sensibles ou spécifiques
+plugins/dynmap/
+plugins/Essentials/userdata/
+plugins/Essentials/warps/
+plugins/WorldEdit/sessions/
+plugins/WorldGuard/worlds/
+
+# Ignorer les fichiers de configuration Java et Gradle
+*.jenv
+*.java-version
+.gradle/
+build/
+
+# Ignorer les fichiers Maven ou Gradle en cache
+.m2/
+.gradle/
+
+# Ignorer les fichiers de packaging ou de distribution
+*.tar
+*.gz
+*.zip
+*.7z
+
+# Ignorer les fichiers de sauvegarde et fichiers temporaires d'édition
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Ignorer les fichiers générés pour les sessions de débogage
+hs_err_pid*
+
+# Exclure les fichiers générés temporairement lors de la création du JAR ou de la compilation
+*.orig
+*.rej

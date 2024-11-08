@@ -1,0 +1,8 @@
+&6Bienvenue, {PLAYER}&6 !
+&6Serveur communautaire axé sur le monde juridique.
+
+&6Simulez des scénarios juridiques et apprenez le droit des contrats !
+
+&6Tapez &c/help&6 pour les commandes.
+&6Tapez &c/list&6 pour voir les joueurs.
+&6Joueurs en ligne : &c{ONLINE} 

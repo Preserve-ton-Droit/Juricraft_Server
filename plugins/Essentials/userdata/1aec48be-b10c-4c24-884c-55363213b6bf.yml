@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 192.168.0.44
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1731078587342
+  login: 1731073722364
+money: '10000010299.0'
+logoutlocation:
+  world: dd6d8035-cadf-496d-9ec5-b60d9f351f12
+  world-name: world
+  x: -1390.951071725519
+  y: 68.0
+  z: -90.84589523430354
+  yaw: 63.30059814453125
+  pitch: 8.700193405151367
+last-account-name: MahouIryoku
+lastlocation:
+  world: dd6d8035-cadf-496d-9ec5-b60d9f351f12
+  world-name: world
+  x: -1382.824301227818
+  y: 68.0
+  z: -98.54050776462336
+  yaw: 10.65618896484375
+  pitch: 5.850121974945068

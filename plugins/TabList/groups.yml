@@ -1,0 +1,20 @@
+# This global group will be applied to all players
+globalGroup:
+  prefix: ''
+  tabname: ''
+  suffix: ''
+
+groups:
+  # Vault group name OR player name OR custom group name (custom is assigned via permission)
+  admin:
+    prefix: '&4[ADMIN] &f'
+    tabname: '%player%'
+    suffix: ''
+  vip:
+    prefix: '&e[VIP] &f'
+    tabname: '%player%'
+    suffix: ''
+  default:
+    prefix: '&7[Player] &f'
+    tabname: '%player%'
+    suffix: ''

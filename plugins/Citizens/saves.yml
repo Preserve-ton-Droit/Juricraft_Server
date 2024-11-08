@@ -20,7 +20,7 @@ npc:
       spawned: true
       followtrait:
         protect: false
-    traitnames: type,scoreboardtrait,owner,mounttrait,followtrait,spawned,location
+    traitnames: followtrait,location,mounttrait,type,spawned,owner,scoreboardtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -76,7 +76,7 @@ npc:
       hologramtrait:
         direction: BOTTOM_UP
         lineHeight: -1.0
-    traitnames: type,owner,dropstrait,rotationtrait,spawned,waypoints,location,skintrait,hologramtrait,scoreboardtrait,mounttrait,text,shop,followtrait,equipment,inventory
+    traitnames: dropstrait,waypoints,inventory,hologramtrait,followtrait,location,spawned,text,skintrait,owner,equipment,mounttrait,type,shop,rotationtrait,scoreboardtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -105,7 +105,7 @@ npc:
         signature: e4YGrf3eGcFIzM0ZeTL8Rmaj2OuGCqfX+Ie1S5AvS3Aa2nVIJJn05OP36iWtiubMD+x1sk6e6+0seffJDFbztUyHLop3SXPQ0XXwKuDRp5WjNhMEU5Gr2ofNn+sdxvImzL7dpsNrCzwvBIMi2TsCD3CtCE6Bqgh/ifoh/wanQqMfTVCI3l8cVIu08Qq0AQwAUakJVXx2CtX+lSPoyvLf7lvp5xhhPel645omaQWiyzCV5aWx+r0Wlqscv7NgvjyBKzmFehwFEs+pNyoSwhO0/ekchVVVm/f3Ufq7LAABbe6vmPAMs2PtBkpLsmoROsVRPuAMFTNz172ieU/JUtZKYoezpHPXK+kbeWG3zU8d4tfJHgDP4P3dfKB/4O7znTjODL6sCLzTu9eEumtiBP4r3lhQ5ehFFdO/A48bWC8ctOv/8eDrP+UKhubvDxSNHd9f7XaVhKmC0tVIeXgodrkKtLKqvxp67dR377DvmPDw3T6/OUdyZ69nTMS+i1NUzTx6W0If8GQRvjeGqQ5ynfX5CL+Hir+PtMTyPh/jYdqtZPjV0gGzQ4TJakSFi63Q1u29Pd0bk+B3jYKKI/1Juyur7KsefRO+9XO2DSEVGqp8zZMl8QrcX0HkwMoAHBCHqh+Isf+Fwh3GCHOMQeBRxgoWVrYzCi+Pq97qN8FRfNUYs6s=
         textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTczMDkwMTAzOTY3NCwKICAicHJvZmlsZUlkIiA6ICI3YTg0YzZjMjViMzQ0NDhmOTYwYjZjOGM0MzcxMGIxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJFcGljTlBDIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E3YmZjOTc4YzBhNmE4MTA2OTYyNTM4YzIyZTQxNjdmY2FhOGFkYWQ3ZGFiZDkyMTUyYWVhMDhlYzRkODVlNSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
         updateSkins: false
-    traitnames: type,scoreboardtrait,skintrait,owner,mounttrait,spawned,inventory,location
+    traitnames: inventory,location,mounttrait,type,spawned,skintrait,scoreboardtrait,owner
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -134,7 +134,7 @@ npc:
         signature: pxjEhYH0Xcp8jBkGpidjChx8t3OKkys2HwLeLrv2aMAtMQgNX7RQegOR9LLfOIS+kpybms8MisVs4tYnQ7tVLktAW3ix8e5nTdH2+O2x3UVlwqS4SWSUqP1oBpZX++BqQmBhBVdBROJ/iMrNmfIEpGAqaxi6Rcg6CKv7OrGLsP5+qABo3vXQupDBaLSfAw47ax76pZJ5F01hiQifSlHd+3PWvDqcCMyrv0L6KznWXEIYE2kDxn+XCe69r4CKKopFsNvlFKmd+wUXhCZz7R117m10nkfqn6zPBVp12YVFrwvswXnriJaAfBUUrmMc2qt8FXkawiEQhVEc1BbNZNaiFvfM1uWhCiIPSnKauhVnSsjupKq/lKZvWtMmJ8ZBqXIwFB2ZcWXYgre2oeQ6AGvEeJPaDE1BXMWI36Bp3HW84Z2bfvzCejmKH4EWV3wFjmOQIhULUbcZWKa9rUSl2rryL0Xtyx/MNLyUSZsdf+FXPPDfLP/lgUY11MwfQUIlZAjc3hXVV0u3ea4anj3JYZhQZ8ULqKPDYafoRIWvN1onNAe6FxWKpLmcYi9K1nB10C+a/QhoKLA+BDvdIzDF0bdIYxzAxKvZKi7qevevZymCIlWERftY6MBBiLTeGXFPu2HIyc11gFY8Afld/JuNEOg1ZPZZeHvZ0WuvGfrDZbQLCXo=
         textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTczMDkwMDkyNzc5NywKICAicHJvZmlsZUlkIiA6ICIxNTA5NTQ5OWUwODU0NmEyYjRmYzY0OGVlNTQyMjJmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJGcmFuayIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84OWFiODFkMTdiZmMyYjZjNGFhOWI0MDQwY2JhZjlmOWExMTA0OTE5NWU2NjZhNzRmYzJlOGRjYmJhZDQzODM0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
         updateSkins: false
-    traitnames: type,scoreboardtrait,skintrait,owner,mounttrait,spawned,inventory,location
+    traitnames: inventory,location,mounttrait,type,spawned,skintrait,scoreboardtrait,owner
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -167,7 +167,7 @@ npc:
       hologramtrait:
         direction: BOTTOM_UP
         lineHeight: -1.0
-    traitnames: type,skintrait,hologramtrait,scoreboardtrait,owner,mounttrait,spawned,inventory,location
+    traitnames: hologramtrait,inventory,location,mounttrait,type,spawned,skintrait,owner,scoreboardtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -216,7 +216,7 @@ npc:
         updateSkins: false
       followtrait:
         protect: false
-    traitnames: type,owner,rotationtrait,spawned,location,scoreboardtrait,hologramtrait,skintrait,mounttrait,text,followtrait,equipment,inventory
+    traitnames: hologramtrait,inventory,followtrait,location,spawned,text,skintrait,owner,equipment,mounttrait,type,scoreboardtrait,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false

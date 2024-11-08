@@ -1,6 +1,4 @@
-# Let's create the README file content for JuriCraft and save it as a .md file
 
-readme_content = """
 # JuriCraft - Le Serveur Minecraft pour Apprendre le Droit des Contrats
 
 🎉 **Lancement de JuriCraft - Notre Nouveau Serveur Minecraft pour Apprendre le Droit des Contrats !** 🎉
@@ -53,4 +51,3 @@ Votre contribution, quelle qu'elle soit, est précieuse pour faire de **JuriCraf
 ### Prêt à embarquer dans l'aventure **JuriCraft** ?
 
 Nous sommes impatients de vous voir sur le serveur et de partager avec vous cette expérience éducative et ludique !
-"""

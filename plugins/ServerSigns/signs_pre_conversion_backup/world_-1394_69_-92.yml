@@ -1,0 +1,46 @@
+permissions: []
+permissionMessage: ''
+cancelPermission: ''
+cancelPermissionMessage: ''
+world: world
+X: -1394
+Y: 69
+Z: -92
+price: 0.0
+exp: 0
+cooldown: 0
+globalCooldown: 0
+lastGlobalUse: 0
+confirmation: false
+confirmationMessage: ''
+cancel_mode: ALWAYS
+commands:
+  '0':
+    command: tellraw @p {"text":"Clique ici pour visiter notre site","clickEvent":{"action":"open_url","value":"https://google.fr"}}
+    type: PLAYER_COMMAND
+    delay: 0
+    grantPerms: []
+    alwaysPersisted: false
+    interactValue: 0
+grantPermissions: []
+priceItems: []
+heldItems: []
+pi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+hi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+loops: -1
+loop_delay: 1
+uses_limit: 0
+uses_tally: 9
+protectedBlocks:
+- world,-1395,69,-92
+displayInternalMessages: true
+timeLimitMaximum: 0
+timeLimitMinimum: 0

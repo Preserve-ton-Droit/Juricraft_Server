@@ -3,6 +3,10 @@
 
 🎉 **Lancement de JuriCraft - Notre Nouveau Serveur Minecraft pour Apprendre le Droit des Contrats !** 🎉
 
+---
+## Version Minecraft : 1.20.1
+---
+
 ## Qui sommes-nous ?
 
 **Préserve ton Droit** est une association à but non lucratif fondée en 2023. Notre mission est de rendre le droit accessible à tous et de faciliter l'accès à la justice. Nous croyons fermement aux valeurs de **protection**, **accessibilité**, **entraide**, et **générosité**.

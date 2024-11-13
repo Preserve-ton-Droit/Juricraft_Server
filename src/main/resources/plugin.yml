@@ -1,0 +1,4 @@
+name: GestionContrats
+version: '1.0-SNAPSHOT'
+main: com.vincent.gestionContrats.GestionContrats
+api-version: '1.20'

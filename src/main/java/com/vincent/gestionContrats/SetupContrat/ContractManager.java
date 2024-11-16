@@ -2,6 +2,7 @@ package com.vincent.gestionContrats.SetupContrat;
 
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -17,7 +18,6 @@ public class ContractManager {
     private static final double CONTRACT_COST_1000 = 1000.0;
     private static final double CONTRACT_COST_5000 = 5000.0;
     private static final double CONTRACT_COST_8000 = 8000.0;
-    private static final double PENALTY_COST = 500.0;
 
     private static final String CONTRACT_1000 = "Construire une maison (1000 Coins)";
     private static final String CONTRACT_5000 = "Construire une maison (5000 Coins)";
@@ -46,75 +46,55 @@ public class ContractManager {
     // Méthode pour proposer un contrat au joueur
     public boolean offerContract(Player player, String contract) {
         UUID playerId = player.getUniqueId();
-        List<String> contracts = offeredContracts.get(playerId);
+        List<String> contracts = offeredContracts.computeIfAbsent(playerId, k -> new ArrayList<>());
 
-        if (contracts == null) {
-            contracts = new ArrayList<>();
-            offeredContracts.put(playerId, contracts);  // Assure que la liste est enregistrée
-        } else {
-            contracts.add(contract);
-        }
-
+        // Vérifier si le joueur a déjà atteint la limite de contrats
         if (contracts.size() >= MAX_CONTRACTS) {
+            Bukkit.getLogger().info("Limite atteinte : " + contracts);
             return false;
         }
 
-        System.out.println("Mes contracts "+contracts);
-        System.out.println("Nombre de contracts au total "+contracts.size());
+        // Vérifier si le joueur a déjà signé ce contrat
+        if (contracts.contains(contract)) {
+            Bukkit.getLogger().info("Le contrat " + contract + " est déjà proposé au joueur " + player.getName());
+            return false;
+        }
 
+        // Vérifier le solde du joueur en fonction du contrat
+        double contractCost = 0.0;
+        if (contract.equals(CONTRACT_1000)) {
+            contractCost = CONTRACT_COST_1000;
+        } else if (contract.equals(CONTRACT_5000)) {
+            contractCost = CONTRACT_COST_5000;
+        } else if (contract.equals(CONTRACT_8000)) {
+            contractCost = CONTRACT_COST_8000;
+        }
+
+        // Vérifier si le joueur a suffisamment d'argent
+        if (economy.getBalance(player) < contractCost) {
+            player.sendMessage(ChatColor.RED + "Vous n'avez pas assez d'argent pour accepter ce contrat.");
+            return false;  // Empêcher l'ajout du contrat si le joueur n'a pas assez d'argent
+        }
+
+        // Si le joueur a suffisamment d'argent, prélever la somme
+        economy.withdrawPlayer(player, contractCost);  // Retirer l'argent du joueur
+
+        // Ajouter le contrat au joueur
+        contracts.add(contract);
+        Bukkit.getLogger().info("Contrat proposé : " + contract + " pour le joueur " + player.getName());
+        Bukkit.getLogger().info("Contrats offerts : " + contracts);
         return true;
     }
 
-    // Méthode pour signer un contrat
-    public boolean signContract(Player player) {
-        UUID playerId = player.getUniqueId();
-        List<String> contracts = offeredContracts.get(playerId);
-
-        if (contracts == null || contracts.isEmpty()) return false;
-
-        String contract = contracts.remove(0);  // Retirer le premier contrat proposé
-        double contractCost = getContractCost(contract);
-
-        if (economy.has(player, contractCost)) {
-            economy.withdrawPlayer(player, contractCost);  // Retirer le montant
-            signedContracts.computeIfAbsent(playerId, k -> new ArrayList<>()).add(contract);
-            return true;
-        }
-
-        return false;
-    }
-
-    // Récupérer le coût du contrat selon son type
-    private double getContractCost(String contract) {
-        if (contract.equals(CONTRACT_1000)) {
-            return CONTRACT_COST_1000;
-        } else if (contract.equals(CONTRACT_5000)) {
-            return CONTRACT_COST_5000;
-        } else {
-            return CONTRACT_COST_8000;
-        }
-    }
-
-    public boolean removeContractWithPenalty(Player player) {
-        UUID playerId = player.getUniqueId();
-        List<String> contracts = signedContracts.get(playerId);
-
-        if (contracts == null || contracts.isEmpty()) return false;
-
-        if (economy.has(player, PENALTY_COST)) {
-            economy.withdrawPlayer(player, PENALTY_COST);
-            contracts.remove(0);  // Retirer le premier contrat de la liste signée
-            return true;
-        }
-
-        return false;
-    }
-
-    public boolean hasContract(UUID playerId) {
-        return offeredContracts.containsKey(playerId) && !offeredContracts.get(playerId).isEmpty();
-    }
-
     public List<String> getActiveContracts(UUID playerId) {
-        return signedContracts.getOrDefault(playerId, new ArrayList<>());
+        List<String> contracts = offeredContracts.getOrDefault(playerId, new ArrayList<>());
+        Bukkit.getLogger().info("Contrats actifs pour le joueur " + playerId + " : " + contracts);
+        return contracts;
+    }
+
+    public void resetContracts(UUID playerId) {
+        Bukkit.getLogger().info("Réinitialisation des contrats pour le joueur : " + playerId);
+        offeredContracts.remove(playerId);
+        signedContracts.remove(playerId);
     }
 }

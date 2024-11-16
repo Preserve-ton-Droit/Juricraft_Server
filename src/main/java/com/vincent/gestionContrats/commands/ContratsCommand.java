@@ -26,18 +26,33 @@ public class ContratsCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (args.length == 0) {
+            // Message principal pour guider les joueurs
+            player.sendMessage(ChatColor.YELLOW + "Interagissez avec le NPC pour gérer vos contrats.");
             player.sendMessage(ChatColor.YELLOW + "Commandes disponibles :");
-            player.sendMessage(ChatColor.YELLOW + "/contrats consulter [1|2|3] - Consulter et choisir un contrat disponible");
-            player.sendMessage(ChatColor.YELLOW + "/contrats accepter - Accepter le contrat proposé");
-            player.sendMessage(ChatColor.YELLOW + "/contrats supprimer - Supprimer un contrat avec une pénalité de 500 Coins");
-            player.sendMessage(ChatColor.YELLOW + "/contrats mescontrats - Afficher vos contrats actifs");
+            player.sendMessage(ChatColor.YELLOW + "/contrats mescontrats - Voir vos contrats actifs");
+            player.sendMessage(ChatColor.YELLOW + "/contrats info - Afficher les détails d'un contrat");
+            player.sendMessage(ChatColor.YELLOW + "/contrats admin reset [joueur] - Réinitialiser les contrats d'un joueur (admin)");
             return true;
         }
 
-        // Commande consulter avec un argument pour choisir le contrat
-        if (args[0].equalsIgnoreCase("consulter")) {
+        // Commande pour voir les contrats actifs
+        if (args[0].equalsIgnoreCase("mescontrats")) {
+            List<String> activeContracts = contractManager.getActiveContracts(player.getUniqueId());
+            if (activeContracts.isEmpty()) {
+                player.sendMessage(ChatColor.RED + "Vous n'avez aucun contrat actif.");
+            } else {
+                player.sendMessage(ChatColor.GREEN + "Vos contrats actifs :");
+                for (String contract : activeContracts) {
+                    player.sendMessage(ChatColor.YELLOW + "- " + contract);
+                }
+            }
+            return true;
+        }
+
+        // Commande pour afficher les détails d'un contrat spécifique
+        if (args[0].equalsIgnoreCase("info")) {
             if (args.length != 2) {
-                player.sendMessage(ChatColor.RED + "Veuillez spécifier un numéro de contrat : 1, 2 ou 3.");
+                player.sendMessage(ChatColor.RED + "Utilisation : /contrats info [1|2|3]");
                 return true;
             }
 
@@ -45,67 +60,47 @@ public class ContratsCommand implements CommandExecutor {
             try {
                 contractChoice = Integer.parseInt(args[1]);
             } catch (NumberFormatException e) {
-                player.sendMessage(ChatColor.RED + "L'argument doit être un nombre (1, 2 ou 3).");
+                player.sendMessage(ChatColor.RED + "Le numéro de contrat doit être un chiffre (1, 2 ou 3).");
                 return true;
             }
 
             String contract = contractManager.getContractByChoice(contractChoice);
-
             if (contract == null) {
-                player.sendMessage(ChatColor.RED + "Choix de contrat invalide. Utilisez 1, 2 ou 3.");
-                return true;
-            }
-
-            if (contractManager.offerContract(player, contract)) {
-                player.sendMessage(ChatColor.GREEN + "Contrat disponible :");
+                player.sendMessage(ChatColor.RED + "Aucun contrat trouvé pour ce numéro. Utilisez 1, 2 ou 3.");
+            } else {
+                player.sendMessage(ChatColor.GREEN + "Détails du contrat #" + contractChoice + " :");
                 player.sendMessage(ChatColor.YELLOW + contract);
-                player.sendMessage(ChatColor.AQUA + "Utilisez /contrats accepter pour signer ce contrat.");
-            } else {
-                player.sendMessage(ChatColor.RED + "Vous avez atteint la limite de contrats actifs.");
             }
-
             return true;
         }
 
-        // Commande accepter
-        if (args[0].equalsIgnoreCase("accepter")) {
-            if (!contractManager.hasContract(player.getUniqueId())) {
-                player.sendMessage(ChatColor.RED + "Vous n'avez sélectionné aucun contrat.");
+        // Commande admin pour réinitialiser les contrats d'un joueur
+        if (args[0].equalsIgnoreCase("admin")) {
+            if (!player.hasPermission("contrats.admin")) {
+                player.sendMessage(ChatColor.RED + "Vous n'avez pas la permission d'utiliser cette commande.");
                 return true;
             }
 
-            if (contractManager.signContract(player)) {
-                player.sendMessage(ChatColor.GREEN + "Vous avez signé le contrat avec succès !");
-            } else {
-                player.sendMessage(ChatColor.RED + "Vous n'avez pas assez de fonds pour signer ce contrat.");
+            if (args.length != 3 || !args[1].equalsIgnoreCase("reset")) {
+                player.sendMessage(ChatColor.RED + "Utilisation : /contrats admin reset [joueur]");
+                return true;
             }
+
+            String targetPlayerName = args[2];
+            Player targetPlayer = player.getServer().getPlayer(targetPlayerName);
+
+            if (targetPlayer == null) {
+                player.sendMessage(ChatColor.RED + "Le joueur " + targetPlayerName + " n'est pas en ligne.");
+                return true;
+            }
+
+            contractManager.resetContracts(targetPlayer.getUniqueId());
+            player.sendMessage(ChatColor.GREEN + "Tous les contrats de " + targetPlayerName + " ont été réinitialisés.");
+            targetPlayer.sendMessage(ChatColor.YELLOW + "Tous vos contrats ont été réinitialisés par un administrateur.");
             return true;
         }
 
-        // Commande supprimer
-        if (args[0].equalsIgnoreCase("supprimer")) {
-            if (contractManager.removeContractWithPenalty(player)) {
-                player.sendMessage(ChatColor.GREEN + "Vous avez supprimé un contrat avec succès, une pénalité de 500 Coins a été appliquée.");
-            } else {
-                player.sendMessage(ChatColor.RED + "Vous n'avez pas assez de fonds pour payer la pénalité, ou vous n'avez aucun contrat actif.");
-            }
-            return true;
-        }
-
-        // Commande mescontrats
-        if (args[0].equalsIgnoreCase("mescontrats")) {
-            List<String> contracts = contractManager.getActiveContracts(player.getUniqueId());
-            if (contracts.isEmpty()) {
-                player.sendMessage(ChatColor.RED + "Vous n'avez aucun contrat actif.");
-            } else {
-                player.sendMessage(ChatColor.GREEN + "Vos contrats actifs :");
-                for (String contract : contracts) {
-                    player.sendMessage(ChatColor.YELLOW + "- " + contract);
-                }
-            }
-            return true;
-        }
-
+        // Si la commande est inconnue
         player.sendMessage(ChatColor.RED + "Commande inconnue. Utilisez /contrats pour voir les commandes disponibles.");
         return true;
     }

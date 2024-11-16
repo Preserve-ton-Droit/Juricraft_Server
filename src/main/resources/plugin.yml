@@ -1,9 +1,16 @@
 name: GestionContrats
-version: ${project.version}
 main: com.vincent.gestionContrats.GestionContrats
+version: ${project.version}
 api-version: '1.20'
 depend: [Vault]
 commands:
   contrats:
-    description: Gérer les contrats disponibles
-    usage: /contrats consulter | /contrats accepter | /contrats suppression | /contrats confirmer-suppression | /contrats lister
+    description: Gérer vos contrats et interagir avec le système
+    usage: >
+      /contrats mescontrats - Voir vos contrats actifs
+      /contrats info [1|2|3] - Voir les détails d'un contrat
+      /contrats admin reset [joueur] - Réinitialiser les contrats d'un joueur (admin)
+permissions:
+  contrats.admin:
+    description: Permission pour administrer les contrats
+    default: op

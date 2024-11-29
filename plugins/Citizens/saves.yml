@@ -1,177 +1,7 @@
 # Citizens NPC Storage
 
-last-created-npc-id: 7
+last-created-npc-id: 12
 npc:
-  '3':
-    name: chicken
-    uuid: 705df438-f8b6-48b1-9fed-0f6c9895b662
-    traits:
-      location:
-        bodyYaw: 165.69913
-        world: world
-        x: '-34.8351'
-        y: '4.0'
-        z: '-158.8376'
-        yaw: '165.6991'
-        pitch: '-42.4921'
-      type: CHICKEN
-      owner:
-        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
-      spawned: true
-      followtrait:
-        protect: false
-    traitnames: followtrait,location,mounttrait,type,spawned,owner,scoreboardtrait
-    navigator:
-      speedmodifier: '1.0'
-      avoidwater: false
-      usedefaultstuckaction: false
-  '2':
-    metadata:
-      cached-skin-uuid: 069a79f4-44e9-4726-a5be-fca90e38aaf5
-      cached-skin-uuid-name: c06dad59-7a15-43c5-a24d-4a0bd54a8b09
-      keep-chunk-loaded: true
-      flyable: false
-      minecraft-ai: false
-    name: '&6EpicNPC'
-    uuid: 06715d81-e0bc-433e-9af8-cac2e92ec68a
-    traits:
-      location:
-        bodyYaw: 222.97046
-        world: world
-        x: '-33.7011'
-        y: '3.0625'
-        z: '-156.2768'
-        yaw: '-137.0295'
-        pitch: '0.0'
-      inventory: {}
-      waypoints:
-        linear:
-          cachePaths: false
-          cycle: false
-        provider: linear
-      type: PLAYER
-      owner:
-        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
-      spawned: true
-      skintrait:
-        fetchDefaultSkin: true
-        signature: QSwKtVy5lZmc2PWKuWNZQSSoAQtb/sNQ2Q+dVTusfZ0/hogNtkVmvSYJq2XqIxChXK7nWKjA9nWK1YJLUrjYzriDq5HDNgdKBFBfNbCanPkJuxSsYtw8hyQKKlL7cmB8u/PL79gEZBrQAByehr97clDT3yiiSkaon8xPZtHelrkShXUDpIMqEk5Z+l0Gwv2sj6XUo/dd87/o5iNilx/afhNAI0Dkrm9v0MJ/VumHAmz0xh1+L+9BnDVMy2PnT1PCOvIQWuSHYOFruXCJvxZMte7AKMZxhNgfVPTSflKsGqSetF+amCWuXt4VoL/Zzf8xXrIRJChaeC7AIbthrg2in2rMDblQ8dosZbTjql1ZoF6823HiamIY2IozZPIaOSTM9mg0mHQRlKv+UdM1hfj8r0Vj6ePs3cGWB2sYsmtnxLu/0gWkm/3twhIyd4WMKyvKxnnEucukuoHFh7hnKWS7L4bkmbqT8d2IKWktV4icTXlhtMa1gUUMhHyLkXta0QgD7UuuOpmC+NWJ1CRKGmart1yzOAjSIpexzVCBEReqOffzO5c8ojLSTNu8UkptZTqKqjBB76rGc3hyIlIINvkTqzZiFf16Us/4eIdr41PMgroPXCVc3mETo2PFJp2Kb/C9G74GzDT4+cRtXHpfcA8VmDjOyfjmx+chRZwzIm/lFno=
-        skinName: c06dad59-7a15-43c5-a24d-4a0bd54a8b09
-        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcyMTExOTU5NTUyMywKICAicHJvZmlsZUlkIiA6ICJhNWZlYWViNDdhYjA0ZDZiYTk2ZjMyOGJjMDQ3MDZjMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJYeW5kcmEyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUzMDY3ODA5Zjc2NDgwMTJjNzYzMGQxMWJjYTk1YjBjYmM5ODczYjQ4MzllNGU4YTVlYTcyMTI1OWUzYzNmZWIiCiAgICB9CiAgfQp9
-        updateSkins: false
-      equipment: {}
-      followtrait:
-        protect: false
-      text:
-        range: '5.0'
-        delay: -1
-        talkitem: default
-        random-talker: true
-        realistic-looking: false
-        speech-bubbles: false
-        talk-close: true
-        text:
-          '0': Bonjour je m'appelle EpicNPC !
-          '1': Comment allez-vous ?
-      hologramtrait:
-        direction: BOTTOM_UP
-        lineHeight: -1.0
-    traitnames: dropstrait,waypoints,inventory,hologramtrait,followtrait,location,spawned,text,skintrait,owner,equipment,mounttrait,type,shop,rotationtrait,scoreboardtrait
-    navigator:
-      speedmodifier: '1.0'
-      avoidwater: false
-      usedefaultstuckaction: false
-  '1':
-    metadata:
-      cached-skin-uuid: 7a84c6c2-5b34-448f-960b-6c8c43710b18
-      cached-skin-uuid-name: epicnpc
-    name: '&6EpicNPC'
-    uuid: 83ac16ac-d66e-473f-ace1-99829fdb86b9
-    traits:
-      location:
-        bodyYaw: 172.79741
-        world: world
-        x: '-34.9698'
-        y: '65.0'
-        z: '-156.8957'
-        yaw: '172.7974'
-        pitch: '0.5997'
-      type: PLAYER
-      owner:
-        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
-      spawned: false
-      skintrait:
-        fetchDefaultSkin: true
-        signature: e4YGrf3eGcFIzM0ZeTL8Rmaj2OuGCqfX+Ie1S5AvS3Aa2nVIJJn05OP36iWtiubMD+x1sk6e6+0seffJDFbztUyHLop3SXPQ0XXwKuDRp5WjNhMEU5Gr2ofNn+sdxvImzL7dpsNrCzwvBIMi2TsCD3CtCE6Bqgh/ifoh/wanQqMfTVCI3l8cVIu08Qq0AQwAUakJVXx2CtX+lSPoyvLf7lvp5xhhPel645omaQWiyzCV5aWx+r0Wlqscv7NgvjyBKzmFehwFEs+pNyoSwhO0/ekchVVVm/f3Ufq7LAABbe6vmPAMs2PtBkpLsmoROsVRPuAMFTNz172ieU/JUtZKYoezpHPXK+kbeWG3zU8d4tfJHgDP4P3dfKB/4O7znTjODL6sCLzTu9eEumtiBP4r3lhQ5ehFFdO/A48bWC8ctOv/8eDrP+UKhubvDxSNHd9f7XaVhKmC0tVIeXgodrkKtLKqvxp67dR377DvmPDw3T6/OUdyZ69nTMS+i1NUzTx6W0If8GQRvjeGqQ5ynfX5CL+Hir+PtMTyPh/jYdqtZPjV0gGzQ4TJakSFi63Q1u29Pd0bk+B3jYKKI/1Juyur7KsefRO+9XO2DSEVGqp8zZMl8QrcX0HkwMoAHBCHqh+Isf+Fwh3GCHOMQeBRxgoWVrYzCi+Pq97qN8FRfNUYs6s=
-        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTczMDkwMTAzOTY3NCwKICAicHJvZmlsZUlkIiA6ICI3YTg0YzZjMjViMzQ0NDhmOTYwYjZjOGM0MzcxMGIxOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJFcGljTlBDIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2E3YmZjOTc4YzBhNmE4MTA2OTYyNTM4YzIyZTQxNjdmY2FhOGFkYWQ3ZGFiZDkyMTUyYWVhMDhlYzRkODVlNSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
-        updateSkins: false
-    traitnames: inventory,location,mounttrait,type,spawned,skintrait,scoreboardtrait,owner
-    navigator:
-      speedmodifier: '1.0'
-      avoidwater: false
-      usedefaultstuckaction: false
-  '0':
-    metadata:
-      cached-skin-uuid: 15095499-e085-46a2-b4fc-648ee54222f8
-      cached-skin-uuid-name: frank
-    name: Frank
-    uuid: e8a1381c-6a7b-4516-a9e1-75eeaf2bee5c
-    traits:
-      location:
-        bodyYaw: -1.5026543
-        world: world
-        x: '-36.7277'
-        y: '65.0'
-        z: '-158.633'
-        yaw: '-1.5027'
-        pitch: '10.9497'
-      type: PLAYER
-      owner:
-        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
-      spawned: false
-      skintrait:
-        fetchDefaultSkin: true
-        signature: pxjEhYH0Xcp8jBkGpidjChx8t3OKkys2HwLeLrv2aMAtMQgNX7RQegOR9LLfOIS+kpybms8MisVs4tYnQ7tVLktAW3ix8e5nTdH2+O2x3UVlwqS4SWSUqP1oBpZX++BqQmBhBVdBROJ/iMrNmfIEpGAqaxi6Rcg6CKv7OrGLsP5+qABo3vXQupDBaLSfAw47ax76pZJ5F01hiQifSlHd+3PWvDqcCMyrv0L6KznWXEIYE2kDxn+XCe69r4CKKopFsNvlFKmd+wUXhCZz7R117m10nkfqn6zPBVp12YVFrwvswXnriJaAfBUUrmMc2qt8FXkawiEQhVEc1BbNZNaiFvfM1uWhCiIPSnKauhVnSsjupKq/lKZvWtMmJ8ZBqXIwFB2ZcWXYgre2oeQ6AGvEeJPaDE1BXMWI36Bp3HW84Z2bfvzCejmKH4EWV3wFjmOQIhULUbcZWKa9rUSl2rryL0Xtyx/MNLyUSZsdf+FXPPDfLP/lgUY11MwfQUIlZAjc3hXVV0u3ea4anj3JYZhQZ8ULqKPDYafoRIWvN1onNAe6FxWKpLmcYi9K1nB10C+a/QhoKLA+BDvdIzDF0bdIYxzAxKvZKi7qevevZymCIlWERftY6MBBiLTeGXFPu2HIyc11gFY8Afld/JuNEOg1ZPZZeHvZ0WuvGfrDZbQLCXo=
-        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTczMDkwMDkyNzc5NywKICAicHJvZmlsZUlkIiA6ICIxNTA5NTQ5OWUwODU0NmEyYjRmYzY0OGVlNTQyMjJmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJGcmFuayIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84OWFiODFkMTdiZmMyYjZjNGFhOWI0MDQwY2JhZjlmOWExMTA0OTE5NWU2NjZhNzRmYzJlOGRjYmJhZDQzODM0IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
-        updateSkins: false
-    traitnames: inventory,location,mounttrait,type,spawned,skintrait,scoreboardtrait,owner
-    navigator:
-      speedmodifier: '1.0'
-      avoidwater: false
-      usedefaultstuckaction: false
-  '5':
-    metadata:
-      cached-skin-uuid: ed950445-1b61-49f3-af95-cf8c67cd5952
-      cached-skin-uuid-name: 070bfd66-c483-45bc-b544-981b553b5c4c
-    name: Chritophe le boss
-    uuid: efb51a9e-c250-493e-be36-023f49c603b8
-    traits:
-      spawned: true
-      location:
-        bodyYaw: 57.572754
-        world: world
-        x: '-38.2928'
-        y: '4.0'
-        z: '-160.5215'
-        yaw: '57.5728'
-        pitch: '15.7491'
-      type: PLAYER
-      owner:
-        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
-      skintrait:
-        fetchDefaultSkin: true
-        signature: TpZFfTqqtNsN45xc2oxq2gWrkRyumfWFOIJal0MtsfKvw3aozzFyPBcDJZfA02QoHQnkcfkgExlbBsT0ylpQCc/Sc/lPtWDQelZSI+bTltm+BZArynllQdq/0vrX9QUG7Nt1V1htv/eyt9gOiE1sLHQ6zu6CkJVrSz3NQFWwTA9xsxyrsekQFGtzPiOn6Jo/B2ft2TP5BxiZuU8YLkwfJl//XIz8syTKpJ7pmv74btgVslErHMC2xvKWm2SW0CR+I4IKZPWGS5gSaIDZOlN2hyA96CLEJDQMwF4gy4q0ZcaJWM5sexOOB6fttRnM9kX7JLOYZYonlu8L36p3hIGfZrI4uwhQeHl77JXbHhxiUUl4xgQwb4jGPWzDtJJw9hsjzwlnCsbUpcY0zzfwfEk9c1Wzhh4jQMsR99W+4sW71Yq4H4SPkF4QXkDM2jf8dYny7b30RVebw64x1LLjdaaA/LSIw1mzdh43F2j4f7pKc8e0qgnyD44xc8EbmLck+JDfybzpCeYeeXoiq5fsFoyKk8a8kOd1AAevjAubmL0xzIGK5jEwVH33f/uYgcQfILTouQG7ROzFn/E4/5qVSdM6tDMTIslL7B+s1kk2wb2C1JXSyf/OCRjWm+bb8hsLlQcJZMHXEx89rMqZnSr8Tt5zFRfmKA4InPvodvEexp71xAg=
-        skinName: 070bfd66-c483-45bc-b544-981b553b5c4c
-        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcyNTgxNjM5ODg2MywKICAicHJvZmlsZUlkIiA6ICI5ZTA5YzM4ZGUzZTY0MDA2OTAwYzAwZTJiOTQ3ZTQwMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ4RFRPTUFTX1lUIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzgwNGI4NGRlODNmMmViMTgwZTA0NjVlNzA5NGMxNjY5NmM0MzRlNDE2NGRlNzUyZWUzNDJhZGZjYjllMTBjYmUiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ==
-        updateSkins: false
-      hologramtrait:
-        direction: BOTTOM_UP
-        lineHeight: -1.0
-    traitnames: hologramtrait,inventory,location,mounttrait,type,spawned,skintrait,owner,scoreboardtrait
-    navigator:
-      speedmodifier: '1.0'
-      avoidwater: false
-      usedefaultstuckaction: false
   '7':
     metadata:
       cached-skin-uuid-name: c06dad59-7a15-43c5-a24d-4a0bd54a8b09
@@ -182,12 +12,12 @@ npc:
         direction: BOTTOM_UP
         lineHeight: -1.0
       location:
-        bodyYaw: 106.7498
+        bodyYaw: -151.44524
         world: world
-        x: '-1383.9113'
-        y: '68.0'
-        z: '-99.5018'
-        yaw: '126.7498'
+        x: '-1387.2734'
+        y: '69.5'
+        z: '-93.9686'
+        yaw: '-151.4452'
         pitch: '0.0'
       spawned: true
       text:
@@ -216,7 +46,39 @@ npc:
         updateSkins: false
       followtrait:
         protect: false
-    traitnames: hologramtrait,inventory,followtrait,location,spawned,text,skintrait,owner,equipment,mounttrait,type,scoreboardtrait,rotationtrait
+    traitnames: mounttrait,type,equipment,followtrait,skintrait,owner,scoreboardtrait,hologramtrait,text,spawned,inventory,rotationtrait,location
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: false
+  '8':
+    metadata:
+      cached-skin-uuid: b9284b91-223d-4df9-b51c-2b35b962c97a
+      cached-skin-uuid-name: 64ca0efb-4a88-44df-b23c-1304244c6ef8
+    name: Contracteur
+    uuid: 5c8bbf19-7687-4455-aece-ffccf819728f
+    traits:
+      owner:
+        uuid: 1aec48be-b10c-4c24-884c-55363213b6bf
+      location:
+        bodyYaw: 106.23288
+        world: world
+        x: '-1381.5478'
+        y: '69.5'
+        z: '-96.9208'
+        yaw: '100.1058'
+        pitch: '0.0'
+      spawned: true
+      skintrait:
+        fetchDefaultSkin: true
+        signature: Ip1JGGONy8o5XTN6P90Bl5PcM5qJPc6ZG+bGK0RDFQjpoDCU3O/u7AAuV2BXPFn3MpQAdszGy0FCqsW0ydkuLBU8MUeT6In/SpQABwxRL3LBPbY7fFfywjCdZ1xwZ2HkxRgb7J4Slmd1CdYoGCsLBpva1eJPlv77bTp3Wmcfy5FctikGMYgfLuG0hqwPAwZ4He2GhNVDq2NV0Ceo51PraAp6A2AtOxWd9UBmxdSZp5uUka0g9EhsTYGVG83oc+g94TJuB+M9o124ozbSlq/HiGjgS36rNwFYCmKrfCePr7jlvoE+mr53rUfhGU60bByEXwAXboJKPgQxnXgAFQe4yy9TzXuxDWlOKuYl7vEft0UCnkRGd26NSm90HIR4hGwjY2V0d9vheaF0dULOQDJDy53GzDQ2gX1eiUbaJN2KdvFpgk7hdnPV9B+ko5wJvO/ot6kyWYiG7quvG2SOmIfrNpY6FjKfBpbQXJIap6lfmPjHhPljBc9QsbK0pElv+DbgV4XnFNsx+1gLeEinKdrFFAxgvC00xywvGM4ZDxWTdhV4LCZ0uA62/954SLKtbB92N9mv4/O5f5ibfajd/oQdqS4YQFqB5n/0cS06GrBY6Is3/ahKCnNGXz/9sqXWoTMbcEeEYCAsd/RBuS4WaVuk5fjeKnFAKMyEi5PzJLLUMQA=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcxODM3Mzc5MjU3MCwKICAicHJvZmlsZUlkIiA6ICJkMDlkOTg1NzRiNjM0ZmNiOWNiN2I5MWZhYmE4ZGIzYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJEdWNrVGVsbHoiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGI3MWRjNGIyM2UzMTkyOTA4YzkyZTQwNzhhN2M2ZTI4ZjFhZjZmNWU2ZWQxNDZjYzE0NmIyMTBkYWJhNjBmZCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+        updateSkins: false
+        skinName: 64ca0efb-4a88-44df-b23c-1304244c6ef8
+      type: PLAYER
+      followtrait:
+        protect: false
+    traitnames: mounttrait,type,followtrait,skintrait,owner,inventory,spawned,rotationtrait,scoreboardtrait,location
     navigator:
       speedmodifier: '1.0'
       avoidwater: false

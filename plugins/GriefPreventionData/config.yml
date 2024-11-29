@@ -9,7 +9,7 @@ GriefPrevention:
     Mode:
       world: Survival
       world_the_end: Disabled
-      world_nether: Disabled
+      world_nether: Survival
     PreventGlobalMonsterEggs: true
     PreventTheft: true
     ProtectCreatures: true
@@ -30,11 +30,11 @@ GriefPrevention:
     Accrued Idle Threshold: 0
     AccruedIdlePercent: 0
     AbandonReturnRatio: 1.0
-    AutomaticNewPlayerClaimsRadius: 4
+    AutomaticNewPlayerClaimsRadius: -1
     AutomaticNewPlayerClaimsRadiusMinimum: 0
     ExtendIntoGroundDistance: 5
     MinimumWidth: 5
-    MinimumArea: 100
+    MinimumArea: 20
     MaximumDepth: -2147483648
     InvestigationTool: STICK
     ModificationTool: GOLDEN_SHOVEL
